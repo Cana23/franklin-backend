@@ -7,7 +7,7 @@ const port = 8080;
 
 // Middleware
 app.use(cors({
-    origin: 'https://localhost:5173',
+    origin: 'http://localhost:5173',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
     allowedHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
   }));
@@ -20,5 +20,5 @@ app.use(citaRouter);
 
 // Inicia el servidor
 app.listen(port, () => {
-  console.log(`Servidor escuchando en https://localhost:${port}`);
+  console.log(`Servidor escuchando en http://localhost:${port}`);
 });
